@@ -32,11 +32,7 @@ function insertListItems(items) {
 const listItemMarkup = createListItemMarkup(galleryItems);
 insertListItems(listItemMarkup);
 
-gallery.addEventListener("click", openModal
-// (e) => {
-//   e.preventDefault();
-//   console.log(e.target)}
-  );
+gallery.addEventListener("click", openModal);
 
 let instance;
 
@@ -50,12 +46,10 @@ function lightboxInstance(e) {
 
 function openModal(e) {
   e.preventDefault();
-  console.log(e.target.nodeName);
 
-  if(e.target.nodeName === "DIV"){
-    console.log(e.target.nodeName);
+  if (e.target.nodeName === "DIV") {
     return;
-  };
+  }
 
   instance = lightboxInstance(e);
   instance.show();
