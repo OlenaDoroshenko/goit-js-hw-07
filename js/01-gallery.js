@@ -46,6 +46,12 @@ function lightboxInstance(e) {
 
 function openModal(e) {
   e.preventDefault();
+  console.log(e.target.nodeName);
+  if(e.target.nodeName !== "IMG"){
+    console.log(object);
+    return;
+  };
+
   instance = lightboxInstance(e);
   instance.show();
   window.addEventListener("keydown", keyDown);
